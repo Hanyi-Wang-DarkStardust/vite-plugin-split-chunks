@@ -26,6 +26,16 @@ import { defineConfig } from 'vite'
 import splitChunksPlugin from 'vite-plugin-split-chunks';
 
 export default defineConfig({
-  plugins: [splitChunksPlugin()]
+  plugins: [splitChunksPlugin({
+    type: 'default',
+    customChunkStrategy: {
+      'react-vendor': {
+        candidates: ['react', 'react-dom'], 
+      },
+      'main-components': {
+        candidates: /src\/components/,
+      }
+    }
+  })]
 })
 ```
