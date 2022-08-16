@@ -1,0 +1,26 @@
+{
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.test.ts"],
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "lib": ["ES2016"],
+    "experimentalDecorators": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "target": "es5",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "paths": {
+      "types/*": ["../vite/types/*"],
+      "vite": ["../vite/src/node/index.js"]
+    }
+  }
+}
