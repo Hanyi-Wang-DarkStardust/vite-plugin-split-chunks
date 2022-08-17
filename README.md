@@ -23,11 +23,11 @@ Include plugin in ```vite.config.ts```
 ```typescript
 // vite.config.js
 import { defineConfig } from 'vite'
-import splitChunksPlugin from 'vite-plugin-split-chunks';
+import splitChunksPlugin, { ESplitChunkType } from 'vite-plugin-split-chunks';
 
 export default defineConfig({
   plugins: [splitChunksPlugin({
-    type: 'default',
+    type: ESplitChunkType.Custom,
     customChunkStrategy: {
       'react-vendor': {
         candidates: ['react', 'react-dom'], 
