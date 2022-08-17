@@ -1,4 +1,1 @@
-/**
- * entry file
- * TODO: start implementing vite plugin
- */
+export * from './interface';

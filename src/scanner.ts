@@ -18,7 +18,7 @@ function scanAndCheckIsDepsIncluded(
   }
 
   const moduleInfo = getModuleInfo(id);
-  if (!moduleInfo?.importers) {
+  if (!moduleInfo?.importers?.length) {
     return false;
   }
 
