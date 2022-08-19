@@ -1,4 +1,4 @@
-import { GetModuleInfo } from 'rollup';
+import type { GetModuleInfo } from 'rollup';
 import { normalizePath } from 'vite';
 
 function scanAndCheckIsDepsIncluded(
